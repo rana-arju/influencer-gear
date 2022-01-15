@@ -42,6 +42,10 @@ header {
     text-transform: capitalize;
 }
 
+.sm-btn {
+    display: none;
+}
+
 .btn:hover i {
     transform: translateX(5px);
     transition: .3s ease-out;
@@ -58,6 +62,14 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+}
+
+.sm-logo {
+    display: none;
+}
+
+.logo h2 {
+    font-size: 28px;
 }
 
 .nav-menu>.menu-items {
@@ -193,7 +205,7 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 330px;
+    width: 300px;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0px -6px 10px 10px #f1f1f1;
@@ -345,8 +357,230 @@ header {
 
 }
 
-.social-media i{
+.social-media i {
     color: #fff;
-  font-size: 20px;
-  margin: 10px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* 
+=====================================================
+                Responsive Design
+======================================================= */
+@media only screen and (max-width: 992px) {
+
+    .menu-items li a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    header,
+    section {
+        margin-bottom: 0;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    .banner-left h1 {
+        font-size: 36px;
+    }
+
+    .banner-right {
+        align-items: center;
+    }
+
+    .brand-logos {
+        grid-gap: 10px;
+    }
+
+    .brand-section {
+        margin-bottom: 50px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subscrip {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .featured-section {
+        margin-bottom: 100px;
+    }
+
+    .subscription-section {
+        margin-bottom: 50px;
+    }
+
+    .subscrip-left {
+        margin-left: 20px;
+    }
+
+    .subscrip-left h2 {
+        font-size: 22px;
+    }
+
+    .subscrip-left p {
+        font-size: 14px;
+    }
+
+    .subscrip-right input {
+        font-size: 15px;
+        padding: 12px 25px;
+    }
+
+    .subscrip-right button {
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sm-logo {
+        display: block;
+        margin: 20px 0;
+        position: relative;
+        border-bottom: 3px solid var(--btnColor);
+    }
+
+    .banner-left h1 {
+        font-size: 30px;
+    }
+
+    .banner-left p {
+        font-size: 15px;
+    }
+
+    .banner-right img {
+        width: 80%;
+    }
+
+    .big-nav {
+        display: none;
+    }
+
+    .logo h2 {
+        text-align: center;
+    }
+
+    .banner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .big-btn {
+        display: none;
+    }
+
+    .sm-btn {
+        display: block;
+        margin: 50px 0;
+    }
+
+    .sm-btn a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.5em;
+    }
+
+    .brand-logos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .product {
+        width: 250px;
+    }
+
+    .product h3 {
+        font-size: 18px;
+    }
+
+    .ratings i {
+        font-size: 12px;
+    }
+
+    .product-info {
+        font-size: 14px;
+    }
+
+    .subscrip {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .subscrip-left {
+        width: 100%;
+    }
+
+    .subscrip-right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .footer-details h2 {
+        font-size: 20px;
+    }
+
+    .footer-details p,
+    .footer-details span {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .banner-left h1 {
+        font-size: 25px;
+    }
+
+    .banner-left p {
+        font-size: 14px;
+    }
+
+    .sm-btn a {
+        font-size: 14px;
+    }
+
+    .brand-section {
+        height: 300px;
+    }
+
+    .brand-logos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .section-header h2 {
+        font-size: 25px;
+    }
+
+    .products {
+        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .load-more {
+        margin-right: 80px;
+    }
+
+    .subscrip-right input {
+        padding: 12px 20px;
+    }
+
+    .subscrip-right button {
+        padding: 15px 25px;
+    }
 }
